@@ -2,6 +2,7 @@ import time
 from turtle import Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 
 screen = Screen()
 screen.title("Pong")
@@ -12,6 +13,7 @@ screen.tracer(0)  # Needed along with update and time.sleep using while loop
 player_1 = Paddle((-350, 0))
 player_2 = Paddle((350, 0))
 ball = Ball()
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(player_1.move_up, "w")
