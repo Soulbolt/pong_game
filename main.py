@@ -37,9 +37,11 @@ while game_is_on:
     # Detect when right paddle misses
     if ball.xcor() > 400:
         ball.reset_position()
+        scoreboard.r_point()
     # Detect when left paddle misses
     if ball.xcor() < -400:
         ball.reset_position()
+        scoreboard.l_point()
 
     # for dist in range(0, 10, 20):
     #     if player_2.ycor() == 0:
